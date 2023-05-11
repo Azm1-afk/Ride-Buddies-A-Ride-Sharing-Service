@@ -1,1 +1,1 @@
-# Ride-Buddies-A-Ride-Sharing-Service
+# Ride Buddies: A-Ride-Sharing-Service
