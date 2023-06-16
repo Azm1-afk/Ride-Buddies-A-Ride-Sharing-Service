@@ -13,9 +13,29 @@ public class RiderWindow2 extends javax.swing.JFrame {
     public RiderWindow2() {
         initComponents();
         
-        jLabel1.setText("Hello, please log in //display username");
+        jLabel1.setText("Hello, please log in "+fetchusername());
         }
 
+    static String fetchusername(){
+        try{
+            File f1 = new File("riderusername.txt");
+            Scanner dataReader = new Scanner(f1);
+            while(dataReader.hasNextLine()){
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+                
+                return fileData;
+            }
+            dataReader.close();
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error!");
+        }
+        return null;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

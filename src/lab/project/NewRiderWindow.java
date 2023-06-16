@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class NewRiderWindow extends javax.swing.JFrame {
-    public NewRider rider = new NewRider();
+    //public NewRider rider = new NewRider();
     
     public NewRiderWindow() {
         initComponents();
@@ -90,7 +90,9 @@ public class NewRiderWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String rider_name = jTextField1.getText();
+        
+        String rider_name = null;
+        rider_name = jTextField1.getText();
                 
         System.out.println(rider_name);
         
@@ -107,7 +109,7 @@ public class NewRiderWindow extends javax.swing.JFrame {
 // working on saving password to file.
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         String rider_password = jPasswordField1.getText();
-        rider.setRider_password(rider_password);
+        //rider.setRider_password(rider_password);
         System.out.println(rider_password);
         
         try{
