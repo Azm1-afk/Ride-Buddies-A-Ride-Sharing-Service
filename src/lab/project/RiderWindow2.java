@@ -5,6 +5,7 @@ import javax.swing.JLabel;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Scanner;
 
 
 public class RiderWindow2 extends javax.swing.JFrame {
@@ -71,7 +72,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         String password = jPasswordField1.getText();
         //System.out.println(password);
-        if(password.equalsIgnoreCase("123")){
+        if(password.equalsIgnoreCase(passwordCheck())){
             SelectRide sr = new SelectRide();
             sr.setVisible(true);
             this.setVisible(false);            
@@ -81,7 +82,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
             this.setVisible(false);
         }       
     }//GEN-LAST:event_jPasswordField1ActionPerformed
-
+   
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -114,6 +115,25 @@ public class RiderWindow2 extends javax.swing.JFrame {
                 new RiderWindow2().setVisible(true);
             }
         });
+    }
+    
+    static String passwordCheck(){
+        try{
+            File f1 = new File("riderpassword.txt");
+            Scanner dataReader = new Scanner(f1);
+            while(dataReader.hasNextLine()){
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+                return fileData;
+            }
+            dataReader.close();
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error!");
+        }
+        return null;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
