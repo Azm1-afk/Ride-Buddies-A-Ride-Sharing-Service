@@ -104,8 +104,7 @@ public class NewRiderWindow extends javax.swing.JFrame {
         String rider_name = null;
         rider_name = jTextField1.getText();
                 
-        System.out.println(rider_name);
-        
+        System.out.println(rider_name);        
         try{
             FileWriter uWrite = new FileWriter("riderusername.txt");
             uWrite.write(rider_name);

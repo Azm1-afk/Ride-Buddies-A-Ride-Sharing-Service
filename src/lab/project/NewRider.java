@@ -3,11 +3,7 @@ package lab.project;
 public class NewRider {
     private String rider_name;
     private String rider_password;
-    
-    {
-        //strawberry
-    }
-    
+        
     public NewRider() {
     }
     
