@@ -140,19 +140,59 @@ public class SelectRide extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        String text= "Gulshan";
+        String filename="location.txt";
+        
+        try{
+            FileWriter fw = new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured during while writing file!");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+       String text= "Banani";
+        String filename="location.txt";
+        
+        try{
+            FileWriter fw = new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured during while writing file!");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        String text= "Bashundhara";
+        String filename="location.txt";
+        
+        try{
+            FileWriter fw = new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured during while writing file!");
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        String text= "Dhanmondi";
+        String filename="location.txt";
+        
+        try{
+            FileWriter fw = new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured during while writing file!");
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
