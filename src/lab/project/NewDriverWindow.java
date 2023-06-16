@@ -126,7 +126,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         String uName = jTextField1.getText();
         System.out.println(uName);
         
-        try{
+        try{            
             FileWriter uWrite = new FileWriter("drivername.txt");
             uWrite.write(uName);
             uWrite.close();
