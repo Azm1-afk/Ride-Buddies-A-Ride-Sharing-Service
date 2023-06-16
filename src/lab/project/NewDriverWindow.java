@@ -9,7 +9,8 @@ package lab.project;
  * @author MASH
  */
 public class NewDriverWindow extends javax.swing.JFrame {
-
+    
+    NewDriver nd = new NewDriver();
     /**
      * Creates new form NewDriverWindow
      */
@@ -30,7 +31,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,6 +40,12 @@ public class NewDriverWindow extends javax.swing.JFrame {
         jLabel2.setText("Username:");
 
         jLabel3.setText("Password:");
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,14 +59,12 @@ public class NewDriverWindow extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(45, 45, 45)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(42, 42, 42)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                            .addComponent(jPasswordField1))))
                 .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -67,21 +72,34 @@ public class NewDriverWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(54, 54, 54)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(54, 54, 54)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(76, 76, 76)))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        String pass = jPasswordField1.getText();
+        System.out.println(pass);
+        
+        //set password in driverpass.txt
+        //nd.setpass(pass);
+        
+        Welcomedriver wd = new Welcomedriver();
+        wd.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,7 +140,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
