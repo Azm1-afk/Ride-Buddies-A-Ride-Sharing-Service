@@ -4,6 +4,9 @@
  */
 package lab.project;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 /**
  *
  * @author MASH
@@ -100,7 +103,15 @@ public class NewDriverWindow extends javax.swing.JFrame {
         System.out.println(pass);
         
         //set password in driverpass.txt
-        //nd.setpass(pass);
+        
+        try{
+            FileWriter pWrite = new FileWriter("driverpass.txt");   
+            pWrite.write(pass);
+            pWrite.close();
+        }catch(IOException e){
+            System.out.println("Unexpected Error!");
+            e.printStackTrace();
+        }
         
         Welcomedriver wd = new Welcomedriver();
         wd.setVisible(true);
