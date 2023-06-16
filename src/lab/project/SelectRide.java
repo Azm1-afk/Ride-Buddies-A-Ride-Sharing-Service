@@ -147,6 +147,9 @@ public class SelectRide extends javax.swing.JFrame {
         }catch(IOException e){
             System.out.println("An unexpected error has occured during while writing file!");
         }
+        SelectVehicle sv = new SelectVehicle();
+        sv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -161,6 +164,9 @@ public class SelectRide extends javax.swing.JFrame {
         }catch(IOException e){
             System.out.println("An unexpected error has occured during while writing file!");
         }
+        SelectVehicle sv = new SelectVehicle();
+        sv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -175,6 +181,9 @@ public class SelectRide extends javax.swing.JFrame {
         }catch(IOException e){
             System.out.println("An unexpected error has occured during while writing file!");
         }
+        SelectVehicle sv = new SelectVehicle();
+        sv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -189,6 +198,9 @@ public class SelectRide extends javax.swing.JFrame {
         }catch(IOException e){
             System.out.println("An unexpected error has occured during while writing file!");
         }
+        SelectVehicle sv = new SelectVehicle();
+        sv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
