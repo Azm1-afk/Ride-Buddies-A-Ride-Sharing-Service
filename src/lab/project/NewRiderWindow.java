@@ -2,7 +2,8 @@
 package lab.project;
 
 import javax.swing.JTextField;
-
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class NewRiderWindow extends javax.swing.JFrame {
     public NewRider rider = new NewRider();
@@ -89,26 +90,40 @@ public class NewRiderWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String rider_name;
+        String rider_name = rider_name = jTextField1.getText();
+        rider.setRider_name(rider_name);        
+        System.out.println(rider_name);
         
-        rider_name = jTextField1.getText();
-        rider.setRider_name(rider_name);
-        
-       
-        
+        try{
+            FileWriter uWrite = new FileWriter("riderusername.txt");
+            uWrite.write(rider_name);
+            uWrite.close();
+        }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Unexpected error occured");
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
-
+    
+// working on saving password to file.
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         String rider_password = jPasswordField1.getText();
         rider.setRider_password(rider_password);
-
+        System.out.println(rider_password);
         
-
+        try{
+            FileWriter pWrite = new FileWriter("riderpassword.txt");
+            pWrite.write(rider_password);
+            pWrite.close();
+        }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Unexpected error occured");
+        }
+        
         RiderWindow2 rw2 = new RiderWindow2();
         rw2.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jPasswordField1ActionPerformed
-
+    // work ends here
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

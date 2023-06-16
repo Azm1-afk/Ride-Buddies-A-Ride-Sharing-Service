@@ -2,6 +2,10 @@
 package lab.project;
 
 import javax.swing.JLabel;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileWriter;
+
 
 public class RiderWindow2 extends javax.swing.JFrame {
 
@@ -70,8 +74,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
         if(password.equalsIgnoreCase("123")){
             SelectRide sr = new SelectRide();
             sr.setVisible(true);
-            this.setVisible(false);
-            
+            this.setVisible(false);            
         } else {
             LoginError le = new LoginError();
             le.setVisible(true);
