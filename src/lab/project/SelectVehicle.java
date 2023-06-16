@@ -83,10 +83,6 @@ public class SelectVehicle extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        
-        SelectVehicle sv = new SelectVehicle();
-        sv.setVisible(true);
-        this.setVisible(false);
-        
         String text = "Car";
         String filename= "Vehicle.txt";
         
@@ -99,12 +95,13 @@ public class SelectVehicle extends javax.swing.JFrame {
             System.out.println("An unexpected error occured during file saving!");
             
         }
+        
+        Invoice inv = new Invoice();
+        inv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SelectVehicle sv = new SelectVehicle();
-        sv.setVisible(true);
-        this.setVisible(false);
         
         String text = "Motorcycle";
         String filename= "Vehicle.txt";
@@ -118,13 +115,12 @@ public class SelectVehicle extends javax.swing.JFrame {
             System.out.println("An unexpected error occured during file saving!");
             
         }
-        
+        Invoice inv = new Invoice();
+        inv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-           SelectVehicle sv = new SelectVehicle();
-        sv.setVisible(true);
-        this.setVisible(false);
         
         String text = "CNG";
         String filename= "Vehicle.txt";
@@ -138,6 +134,9 @@ public class SelectVehicle extends javax.swing.JFrame {
             System.out.println("An unexpected error occured during file saving!");
             
         }
+        Invoice inv = new Invoice();
+        inv.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     
