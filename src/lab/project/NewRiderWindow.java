@@ -90,7 +90,7 @@ public class NewRiderWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String rider_name = rider_name = jTextField1.getText();
+        String rider_name = jTextField1.getText();
         rider.setRider_name(rider_name);        
         System.out.println(rider_name);
         
