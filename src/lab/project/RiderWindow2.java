@@ -69,7 +69,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         String password = jPasswordField1.getText();
-        if(password == "123"){
+        if(password.equalsIgnoreCase("123")){
             SelectRide sr = new SelectRide();
             sr.setVisible(true);
             this.setVisible(false);
