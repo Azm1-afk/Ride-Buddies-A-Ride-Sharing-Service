@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package lab.project;
 
 import javax.swing.JLabel;
@@ -10,7 +7,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
 
     public RiderWindow2() {
         initComponents();
-        //display name here
+        
         jLabel1.setText("Hello, please log in //display username");
         }
 
@@ -81,9 +78,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
         }       
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -109,7 +104,7 @@ public class RiderWindow2 extends javax.swing.JFrame {
         //</editor-fold>
 
         
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new RiderWindow2().setVisible(true);

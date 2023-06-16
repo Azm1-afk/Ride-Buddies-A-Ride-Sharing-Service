@@ -3,16 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lab.project;
-//import java.util.Scanner;
-/**
- *
- * @author MASH
- */
+
 public class LoginError extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginError
-     */
+    
     public LoginError() {
         initComponents();
     }
@@ -78,11 +72,11 @@ public class LoginError extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
-        //Scanner input = new Scanner(System.in);
+       
         String password = jPasswordField2.getText();
         System.out.println(password);
         String correct = "123";
-        //input.nextLine();
+        
         if(password.equalsIgnoreCase(correct)){
             SelectRide sr = new SelectRide();
             sr.setVisible(true);
@@ -95,9 +89,7 @@ public class LoginError extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jPasswordField2ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

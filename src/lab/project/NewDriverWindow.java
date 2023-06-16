@@ -7,16 +7,11 @@ package lab.project;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-/**
- *
- * @author MASH
- */
+
 public class NewDriverWindow extends javax.swing.JFrame {
     
     NewDriver nd = new NewDriver();
-    /**
-     * Creates new form NewDriverWindow
-     */
+    
     public NewDriverWindow() {
         initComponents();
     }
@@ -102,7 +97,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         String pass = jPasswordField1.getText();
         System.out.println(pass);
         
-        //set password in driverpass.txt
+       
         
         try{
             FileWriter pWrite = new FileWriter("driverpass.txt");   
@@ -119,7 +114,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        //drivername.txt
+        
         String uName = jTextField1.getText();
         System.out.println(uName);
         
@@ -133,9 +128,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

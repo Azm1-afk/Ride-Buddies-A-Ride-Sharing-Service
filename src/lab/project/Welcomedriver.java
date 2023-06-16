@@ -4,23 +4,18 @@
  */
 package lab.project;
 import javax.swing.JLabel;
-/**
- *
- * @author MASH
- */
+
 public class Welcomedriver extends javax.swing.JFrame {
     
     
-    /**
-     * Creates new form Welcomedriver
-     */
+    
     public Welcomedriver() {
         initComponents();
         jLabel1.setText("Welcome "+drivername());
     }
     
     static String drivername(){
-        //get driver name from file drivername.txt
+        
         return "khan";
     }
     
