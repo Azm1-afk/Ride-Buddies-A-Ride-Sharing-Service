@@ -4,6 +4,10 @@
  */
 package lab.project;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 public class LoginError extends javax.swing.JFrame {
 
     
@@ -75,9 +79,8 @@ public class LoginError extends javax.swing.JFrame {
        
         String password = jPasswordField2.getText();
         System.out.println(password);
-        String correct = "123";
         
-        if(password.equalsIgnoreCase(correct)){
+        if(password.equalsIgnoreCase(passwordCheck())){
             SelectRide sr = new SelectRide();
             sr.setVisible(true);
             this.setVisible(false);
@@ -88,7 +91,25 @@ public class LoginError extends javax.swing.JFrame {
             this.setVisible(false);
         }
     }//GEN-LAST:event_jPasswordField2ActionPerformed
-
+    
+    static String passwordCheck(){
+        try{
+            File f1 = new File("riderpassword.txt");
+            Scanner dataReader = new Scanner(f1);
+            while(dataReader.hasNextLine()){
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+                return fileData;
+            }
+            dataReader.close();
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error!");
+        }
+        return null;
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
