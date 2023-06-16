@@ -4,15 +4,9 @@
  */
 package lab.project;
 
-/**
- *
- * @author MASH
- */
+
 public class Invoice extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Invoice
-     */
     public Invoice() {
         initComponents();
         jLabel1.setText("Thank you for using Ride Buddies!");
@@ -81,9 +75,17 @@ public class Invoice extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     /**
      * @param args the command line arguments
      */
+=======
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        jTextField1.setText("User: mash");
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+   
+>>>>>>> 10d974a60358909edc4f4c63ec08b761046d5df5
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -108,7 +110,7 @@ public class Invoice extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Invoice().setVisible(true);
