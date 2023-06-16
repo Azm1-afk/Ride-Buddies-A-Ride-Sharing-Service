@@ -99,9 +99,7 @@ public class NewRiderWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
-        String rider_password;
-
-        rider_password = jPasswordField1.getText();
+        String rider_password = jPasswordField1.getText();
         rider.setRider_password(rider_password);
 
         
