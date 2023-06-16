@@ -112,9 +112,6 @@ public class NewDriverWindow extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         String pass = jPasswordField1.getText();
         System.out.println(pass);
-        
-       
-        
         try{
             FileWriter pWrite = new FileWriter("driverpass.txt");   
             pWrite.write(pass);
@@ -134,7 +131,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         String uName = jTextField1.getText();
         System.out.println(uName);
         
-        try{            
+        try{
             FileWriter uWrite = new FileWriter("drivername.txt");
             uWrite.write(uName);
             uWrite.close();
@@ -142,6 +139,15 @@ public class NewDriverWindow extends javax.swing.JFrame {
             System.out.println("Unexpected error!");    
             e.printStackTrace();
         }
+        
+ 
+            File delFile = new File("C:\\Users\\Azm1\\Documents\\Ride-Buddies-A-Ride-Sharing-Service\\drivername.txt");
+            if(delFile.delete()){
+                System.out.println("Deleted!");
+            }else{
+                System.out.println("Could not delete");
+            }
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
    
