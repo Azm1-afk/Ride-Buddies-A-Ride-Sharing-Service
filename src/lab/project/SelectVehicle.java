@@ -81,9 +81,15 @@ public class SelectVehicle extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+        //save "car" in vehicle.txt
+        Invoice inv = new Invoice();
+        inv.setVisible(true);
+
        
         SelectVehicle sv = new SelectVehicle();
         sv.setVisible(true);
+
         this.setVisible(false);
         
         String text= "Car";
