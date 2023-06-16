@@ -31,6 +31,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,6 +55,8 @@ public class NewDriverWindow extends javax.swing.JFrame {
 
         jLabel5.setText("Enter your credentials to continue");
 
+        jLabel6.setText("N.B: Enter your username and press enter to confirm");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -66,16 +69,19 @@ public class NewDriverWindow extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3))
+                                .addGap(42, 42, 42)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+                                    .addComponent(jPasswordField1)))
+                            .addComponent(jLabel6)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(105, 105, 105)
                         .addComponent(jLabel5)))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,7 +100,9 @@ public class NewDriverWindow extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(76, 76, 76)))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,9 +112,6 @@ public class NewDriverWindow extends javax.swing.JFrame {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         String pass = jPasswordField1.getText();
         System.out.println(pass);
-        
-       
-        
         try{
             FileWriter pWrite = new FileWriter("driverpass.txt");   
             pWrite.write(pass);
@@ -126,7 +131,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
         String uName = jTextField1.getText();
         System.out.println(uName);
         
-        try{            
+        try{
             FileWriter uWrite = new FileWriter("drivername.txt");
             uWrite.write(uName);
             uWrite.close();
@@ -134,6 +139,15 @@ public class NewDriverWindow extends javax.swing.JFrame {
             System.out.println("Unexpected error!");    
             e.printStackTrace();
         }
+        
+ 
+            File delFile = new File("C:\\Users\\Azm1\\Documents\\Ride-Buddies-A-Ride-Sharing-Service\\drivername.txt");
+            if(delFile.delete()){
+                System.out.println("Deleted!");
+            }else{
+                System.out.println("Could not delete");
+            }
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
    
@@ -174,6 +188,7 @@ public class NewDriverWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
