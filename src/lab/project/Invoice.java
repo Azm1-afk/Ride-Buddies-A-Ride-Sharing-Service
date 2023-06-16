@@ -15,6 +15,7 @@ public class Invoice extends javax.swing.JFrame {
         initComponents();
         jLabel5.setText("User "+fetchusername()+" to "+fetchlocation()+" on "+fetchvehicle());
         jLabel6.setText("Amount: BDT"+cost());
+        
     }
     
     //String[] place = {"Mir", "Bash", "Ban", "Gul", "Dmd"};
