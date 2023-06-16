@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package lab.project;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
@@ -121,11 +123,20 @@ public class SelectRide extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //save "Mirpur" in location.txt
         
-        SelectVehicle sv = new SelectVehicle();
-        sv.setVisible(true);
-        this.setVisible(false);
+        String text= "Mirpur";
+        String filename="location.txt";
+        
+        try{
+            FileWriter fw = new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured during while writing file!");
+        }
+        
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
