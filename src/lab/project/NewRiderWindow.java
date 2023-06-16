@@ -1,7 +1,9 @@
-
 package lab.project;
 
 import javax.swing.JTextField;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 
 public class NewRiderWindow extends javax.swing.JFrame {
@@ -89,12 +91,8 @@ public class NewRiderWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String rider_name;
-        
-        rider_name = jTextField1.getText();
+        String rider_name = jTextField1.getText();
         rider.setRider_name(rider_name);
-        
-       
         
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -102,8 +100,9 @@ public class NewRiderWindow extends javax.swing.JFrame {
         String rider_password;
 
         rider_password = jPasswordField1.getText();
-        rider.setRider_password(rider_password);
-
+        rider.setRider_password(rider_password);      
+        
+        
         
 
         RiderWindow2 rw2 = new RiderWindow2();

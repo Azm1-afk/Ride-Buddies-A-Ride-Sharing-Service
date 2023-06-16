@@ -1,7 +1,9 @@
 
 package lab.project;
 
+import java.io.File;
 import javax.swing.JLabel;
+import java.io.IOException;
 
 public class RiderWindow2 extends javax.swing.JFrame {
 
