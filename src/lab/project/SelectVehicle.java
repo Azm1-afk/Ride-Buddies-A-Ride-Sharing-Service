@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package lab.project;
 
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class SelectVehicle extends javax.swing.JFrame {
 
@@ -87,14 +85,56 @@ public class SelectVehicle extends javax.swing.JFrame {
         SelectVehicle sv = new SelectVehicle();
         sv.setVisible(true);
         this.setVisible(false);
+        
+        String text= "Car";
+        String filename = "Vehicle.txt";
+        
+        try{
+            FileWriter fw= new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured while saving vehicle!");
+        }
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        SelectVehicle sv = new SelectVehicle();
+        sv.setVisible(true);
+        this.setVisible(false);
+        
+        String text= "MotorCycle";
+        String filename = "Vehicle.txt";
+        
+        try{
+            FileWriter fw= new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured while saving vehicle!");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        SelectVehicle sv = new SelectVehicle();
+        sv.setVisible(true);
+        this.setVisible(false);
+        
+        String text= "CNG";
+        String filename = "Vehicle.txt";
+        
+        try{
+            FileWriter fw= new FileWriter(filename);
+            fw.write(text);
+            fw.close();
+            
+        }catch(IOException e){
+            System.out.println("An unexpected error has occured while saving vehicle!");
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
     
