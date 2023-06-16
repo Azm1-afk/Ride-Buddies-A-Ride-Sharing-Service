@@ -4,15 +4,113 @@
  */
 package lab.project;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
 
 public class Invoice extends javax.swing.JFrame {
 
     public Invoice() {
         initComponents();
-        jLabel5.setText("User //fetch name");
-        jLabel6.setText("Amount: BDT//fetch name");
+        jLabel5.setText("User "+fetchusername()+" to "+fetchlocation()+" on "+fetchvehicle());
+        jLabel6.setText("Amount: BDT"+cost());
     }
-
+    
+    //String[] place = {"Mir", "Bash", "Ban", "Gul", "Dmd"};
+    //String[] vehicle = {"Car", "Bike", "CNG"};
+    
+    
+    static double cost(){
+        switch(fetchvehicle()){
+            case "Car":
+                switch(fetchlocation()){
+                    case "Mirpur": return 250;
+                    case "Gulshan": return 400;
+                    case "Banani": return 320;
+                    case "Bashundhara": return 150;
+                    case "Dhanmondi": return 350;
+                    default: System.out.println("Error calculating fees.");
+                }
+            case "Motorcycle": 
+                switch(fetchlocation()){
+                    case "Mirpur": return 150;
+                    case "Gulshan": return 200;
+                    case "Banani": return 120;
+                    case "Bashundhara": return 90;
+                    case "Dhanmondi": return 130;
+                    default: System.out.println("Error calculating fees.");
+                }
+            case "CNG": 
+                switch(fetchlocation()){
+                    case "Mirpur": return 220;
+                    case "Gulshan": return 350;
+                    case "Banani": return 260;
+                    case "Bashundhara": return 230;
+                    case "Dhanmondi": return 250;
+                    default: System.out.println("Error calculating fees.");
+                }
+            default: System.out.println("Error calculating fees.");
+        } return 0;
+    }
+    
+    static String fetchvehicle(){
+        try{
+            File f1 = new File("Vehicle.txt");
+            Scanner dataReader = new Scanner(f1);
+            while(dataReader.hasNextLine()){
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+                return fileData;
+            }
+            dataReader.close();
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error!");
+        }
+        return null;
+    }
+    
+    static String fetchlocation(){
+        try{
+            File f1 = new File("location.txt");
+            Scanner dataReader = new Scanner(f1);
+            while(dataReader.hasNextLine()){
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+                return fileData;
+            }
+            dataReader.close();
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error!");
+        }
+        return null;
+    }
+    
+    static String fetchusername(){
+        try{
+            File f1 = new File("riderusername.txt");
+            Scanner dataReader = new Scanner(f1);
+            while(dataReader.hasNextLine()){
+                String fileData = dataReader.nextLine();
+                System.out.println(fileData);
+                return fileData;
+            }
+            dataReader.close();
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error!");
+        }
+        return null;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
