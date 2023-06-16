@@ -120,6 +120,17 @@ public class NewDriverWindow extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         //drivername.txt
+        String uName = jTextField1.getText();
+        System.out.println(uName);
+        
+        try{
+            FileWriter uWrite = new FileWriter("drivername.txt");
+            uWrite.write(uName);
+            uWrite.close();
+        }catch(IOException e){
+            System.out.println("Unexpected error!");    
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
