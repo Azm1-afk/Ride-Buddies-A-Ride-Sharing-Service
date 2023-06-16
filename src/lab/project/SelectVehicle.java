@@ -4,15 +4,10 @@
  */
 package lab.project;
 
-/**
- *
- * @author MASH
- */
+
 public class SelectVehicle extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SelectVehicle
-     */
+    
     public SelectVehicle() {
         initComponents();
     }
@@ -88,7 +83,7 @@ public class SelectVehicle extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //save "car" in vehicle.txt
+       
         SelectVehicle sv = new SelectVehicle();
         sv.setVisible(true);
         this.setVisible(false);
@@ -102,9 +97,7 @@ public class SelectVehicle extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -129,7 +122,7 @@ public class SelectVehicle extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SelectVehicle().setVisible(true);

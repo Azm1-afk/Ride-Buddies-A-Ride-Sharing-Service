@@ -6,15 +6,10 @@ package lab.project;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- *
- * @author MASH
- */
+
 public class SelectRide extends javax.swing.JFrame {
 
-    /**
-     * Creates new form SelectRide
-     */
+   
     public SelectRide() {
         initComponents();
     }
@@ -222,7 +217,7 @@ public class SelectRide extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new SelectRide().setVisible(true);
